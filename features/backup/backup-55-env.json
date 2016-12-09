@@ -1,0 +1,43 @@
+{
+  "env": [{
+    "type": "confirm",
+    "name": "BACKUP",
+    "message": "Enable the Backup process:"
+  }, {
+    "type": "input",
+    "name": "BACKUP_HOUR",
+    "message": "Hour of the daily backup (0-23):",
+    "default": "3",
+    "when": "BACKUP=true"
+  }, {
+    "type": "input",
+    "name": "BACKUP_NAME",
+    "message": "Name of your backup files (without extension) (use {date} for the date of the day):",
+    "default": "{date}_backup",
+    "when": "BACKUP=true"
+  }, {
+    "type": "confirm",
+    "name": "BACKUP_EXPORT",
+    "message": "Export the Backup files to another server (scp protocol):",
+    "default": false,
+    "when": "BACKUP=true"
+  }, {
+    "type": "input",
+    "name": "BACKUP_SERVER",
+    "message": "Complete uri of your destination backups export:",
+    "default": "admin:password@example.com:port:/home/admin/",
+    "when": ["BACKUP=true", "BACKUP_EXPORT=true"]
+  }, {
+    "type": "input",
+    "name": "BACKUP_KEEP_DAYS",
+    "message": "Days to keep the backups (0 to infinite):",
+    "default": "30",
+    "when": "BACKUP=true"
+  }, {
+    "type": "confirm",
+    "name": "BACKUP_KEEP_LOCAL",
+    "message": "Keep the local backup files:",
+    "default": true,
+    "when": ["BACKUP=true", "BACKUP_EXPORT=true"]
+  }]
+}

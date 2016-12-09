@@ -1,0 +1,27 @@
+{
+  "name": "allons-y-backup",
+  "version": "0.1.0",
+  "description": "Backup your content every day.",
+  "license": "MIT",
+  "homepage": "https://allons-y.io",
+  "author": "CodeCorico <hello@codecorico.com>",
+  "bugs": "https://github.com/CodeCorico/allons-y-backup/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeCorico/allons-y-backup.git"
+  },
+  "engines": {
+    "node": ">=4.1",
+    "npm": ">=3.2"
+  },
+  "devDependencies": {
+    "allons-y-dev-chore": "^1.0.0"
+  },
+  "dependencies": {
+    "allons-y": "^1.0.0",
+    "async": "^2.1.4",
+    "fs-extra": "^1.0.0",
+    "scp2": "^0.5.0",
+    "tar.gz": "^1.0.5"
+  }
+}
